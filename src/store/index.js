@@ -11,7 +11,7 @@ const state = {
 }
 
 const mutations = {
-  saveAdaminInfo(adminInfo) {
+  saveAdaminInfo(state,adminInfo) {
     state.adminInfo = adminInfo;
   }
 }
@@ -21,7 +21,7 @@ const actions = {
     try {
       const res = await getAdminInfo();
       if (res.status == 1) {
-        commit('saveAdminInfo', res.data);
+        commit('saveAdaminInfo', res.data);
       } else {
         throw  new Error(res);
       }

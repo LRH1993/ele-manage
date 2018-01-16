@@ -57,8 +57,8 @@
       ...mapState(['adminInfo'])
     },
     methods: {
-      ...mapActions(['getAdminData']),
-      async submitFor(formName) {
+      ...mapActions(['getAdaminData']),
+      async submitForm(formName) {
         this.$refs[formName].validate(async (valid) => {
           if (valid) {
             const res = await login({user_name: this.loginForm.username, password: this.loginForm.password});
@@ -96,3 +96,37 @@
     }
   }
 </script>
+<style lang="less" scoped>
+  @import "../style/mixin.less";
+
+  .login_page {
+    background-color: #324057;
+  }
+  .form_container {
+    .wh(320px, 230px);
+    .ctp(320px, 230px);
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+  }
+  .submit_btn {
+    width: 100%;
+    font-size: 16px;
+  }
+  .manage_tip {
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    left: 0;
+  }
+  .manage_tip p {
+    font-size: 34px;
+    color: #fff;
+  }
+  .tip {
+    font-size: 12px;
+    color: red;
+  }
+
+</style>
