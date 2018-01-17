@@ -66,7 +66,8 @@
               this.$message({
                 type: 'sucess',
                 message: '登录成功'
-              })
+              });
+              this.$router.push('manage');
             } else {
               this.$message({
                 type: 'error',
@@ -91,6 +92,7 @@
             type: 'success',
             message: '检测到您之前登录过，将自动登录'
           });
+          this.$router.push('manage');
         }
       }
     }
@@ -127,6 +129,13 @@
   .tip {
     font-size: 12px;
     color: red;
+  }
+  .form-fade-enter-active,.form-fade-leave-active{
+    transition: all 1s;
+  }
+  .form-fade-enter, .form-fade-leave-to{
+    transform:translate3d(0,-50px,0);
+    opacity: 0;
   }
 
 </style>
