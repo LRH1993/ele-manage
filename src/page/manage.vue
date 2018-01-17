@@ -36,7 +36,11 @@
           </el-menu>
         </el-col>
         <el-col :span = '20' style="height: 100%; overflow: auto">
+          <keep-live>
+            <router-view>
 
+            </router-view>
+          </keep-live>
         </el-col>
       </el-row>
 
