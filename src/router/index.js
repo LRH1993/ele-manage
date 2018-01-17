@@ -5,6 +5,7 @@ Vue.use(Router)
 
 import login from '../page/login.vue'
 import manage from '../page/manage.vue'
+import home from '../page/home.vue'
 
 export default new Router({
   routes: [
@@ -15,7 +16,12 @@ export default new Router({
     {
       path: '/manage',
       component: manage,
-      name: ''
+      name: '',
+      children: [{
+        path: '',
+        component: home,
+        meta: [],
+      }]
     }
   ]
 })
