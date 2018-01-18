@@ -6,8 +6,8 @@
 
 <script type="text/ecmascript-6">
     import echarts from 'echarts/lib/echarts'
-    import  'echarts/lib/bar'
-    import 'echarts/lib/line'
+    import  'echarts/lib/chart/bar'
+    import 'echarts/lib/chart/line'
     import 'echarts/lib/component/title'
     import 'echarts/lib/component/legend'
     import 'echarts/lib/component/toolbox'
@@ -56,7 +56,7 @@
                 name:'用户',
                 min:0,
                 max:200,
-                position:left,
+                position:'left',
                 axisLine:{
                   lineStyle:{
                     color:'#999'
@@ -71,7 +71,7 @@
                 name:'订单',
                 min:0,
                 max:200,
-                position:right,
+                position:'right',
                 axisLine:{
                   lineStyle:{
                     color:'#999'
@@ -86,7 +86,7 @@
               {
                 name:'新注册用户',
                 type:'line',
-                data:this.senvenDate[0],
+                data:this.sevenDate[0],
                 yAxisIndex:0,
                 markPoint:{
                   data:[
@@ -98,7 +98,7 @@
               {
                 name:'新增订单',
                 type:'line',
-                data:this.senvenDate[1],
+                data:this.sevenDate[1],
                 yAxisIndex:1,
                 markPoint:{
                   data:[
@@ -110,8 +110,8 @@
               {
                 name:'新增管理员',
                 type:'line',
-                data:this.senvenDate[2],
-                yAxisIndex:0,
+                data:this.sevenDate[2],
+                yAxisIndex:1,
                 markPoint:{
                   data:[
                     {type:'max',name:'最大值'},
@@ -135,3 +135,9 @@
       }
     }
 </script>
+<style>
+  .line_container{
+    display: flex;
+    justify-content: center;
+  }
+</style>
