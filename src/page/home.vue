@@ -15,11 +15,16 @@
           <el-col :span = 5><div class="data_list"><span class="data_num">{{allAdminCount}}</span>管理员</div></el-col>
         </el-row>
       </section>
+      <tendency></tendency>
     </div>
 </template>
 
 <script>
+  import tendency from '../components/tendency.vue'
     export default {
+      components:{
+        tendency
+      }
     }
 </script>
 <style lang="less" scoped>
