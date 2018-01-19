@@ -49,7 +49,7 @@
     mounted() {
       this.showLogin = true;
       if (!this.adminInfo.id) {
-        this.getAdaminData()
+        this.getAdminData()
       }
 
     },
@@ -57,7 +57,7 @@
       ...mapState(['adminInfo'])
     },
     methods: {
-      ...mapActions(['getAdaminData']),
+      ...mapActions(['getAdminData']),
       async submitForm(formName) {
         this.$refs[formName].validate(async (valid) => {
           if (valid) {

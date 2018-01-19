@@ -1,5 +1,6 @@
 <template>
   <div>
+    <head-top></head-top>
     <section class="data_section">
       <header class="section_title">数据统计</header>
       <el-row :gutter="20" style="margin-bottom: 10px;">
@@ -37,6 +38,7 @@
 
 <script>
   import tendency from '../components/tendency.vue'
+  import headTop from '../components/headTop.vue'
   import dtime from 'time-formater'
   import {userCount, orderCount, getUserCount, getOrderCount, adminDayCount, adminCount} from '@/api/getData'
 
@@ -54,7 +56,7 @@
       }
     },
     components: {
-      tendency
+      tendency,headTop
     },
     mounted() {
       this.initData();
